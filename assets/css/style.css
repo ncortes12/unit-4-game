@@ -1,0 +1,60 @@
+body {background-image: url(../images/swirl_pattern.png);}
+
+.header
+        { color:whitesmoke;
+        font-size:28px;
+        background:purple;
+        height:50px;
+        width:15%;
+        padding-top:15px;
+        margin-bottom:15px;
+       margin-left:500px;
+        }
+ p{margin-bottom:10px;
+line-height: 1.5;} 
+
+.rules{color:teal;
+font-size:18px;
+background:plum;
+width:25%;
+padding:20px;
+margin-bottom:15px;
+margin-left:500px;}
+
+#randomnumber {color:black;
+height:70px;
+width:15%;
+background:teal;
+float:left;
+margin-bottom:15px;
+margin-left:500px;}
+
+.scoreboard {float:left;
+color:teal;
+background:plum;
+height:70px;
+width:10%;
+margin-left:10px;
+margin-bottom:15px;
+}
+
+.label{clear:left;
+    color:white;
+    font-size:18px;
+    background:blue;
+    width:25%;
+    margin-bottom:15px;
+    margin-left:500px;
+}
+.totalScore{clear:left;
+    font:white;
+    font-size:18px;
+    background:blue;
+    width:25%;
+    height:70px;
+    margin-left:500px;
+}
+.pics{clear:left;
+    margin-right:15px;
+margin-bottom:15px;
+margin-left:500px;}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    
+</head>
+
+<body>
+<div class="header">Crystal Collector!</div>
+<div class="rules">
+    <p>At the start of the game you will be given a random number.</p>
+    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+    <p>You win the game by matching your total score to the random number, you lose the game if your score goes above the random number.</p>
+    <p>The value of each crystal is hidden from you until you click on it, but stays consistent throughout the game.</p>
+    <p>Each time the game starts, the game will change the values of each crystal.</p>
+</div>
+<div id="randomnumber">
+    <p> Number to Guess: </p>
+</div>
+<div class="scoreboard">
+    <p class= "wins">Wins: </p>
+    <p class= "Losses">Losses: </p>
+</div>
+<div class="pics">
+    <button class="crystal1">
+    <img alt = "Crystal 1"  src=assets/images/crystal-1.jpg height =100px width =100px >
+</button>
+<button class= "crystal2">
+    <img alt = "Crystal 2" src=assets/images/crystal-2.jpg height =100px width =100px>
+</button>
+<button class="crystal3">
+    <img alt = "Crystal 3" class="crystal3" src=assets/images/crystal-3.jpg height =100px width =100px>
+</button>
+<button class= "crystal4">
+    <img alt = "Crystal 4"  src=assets/images/crystal-5.jpg height =100px width =100px>
+</button>   
+    
+    
+</div>
+<div class="label"><p>Your total score is:</p></div>
+<div class="totalScore"></div>
+</body>
+
+</html>
