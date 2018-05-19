@@ -8,61 +8,77 @@ $(document).ready(function () {
     var losses = 0
     var total = 0
     var adder = 0
-   
-      
 
-
-
-    
-    var gameOver = function () {
-        total = parseInt(total);
-        console.log("I'm working!");
-        if (total === computerNumber) {
-            wins++;
-            $(".wins").text(wins);
-            
-        }
-        if (total > computerNumber) {
-            losses++;
-            $(".Losses").text(losses);
-           
-        }
-        
-        
+    var reset = function () {
+        total = 0;
+        adder = 0;
+        $(".totalScore").text(total);
+        computerNumber = Math.floor((Math.random() * 120) + 19)
+        crystalValue1 = Math.floor((Math.random() * 12) + 1)
+        crystalValue2 = Math.floor((Math.random() * 12) + 1)
+        crystalValue3 = Math.floor((Math.random() * 12) + 1)
+        crystalValue4 = Math.floor((Math.random() * 12) + 1)
+        $("#randomNumber").text(computerNumber);
     }
 
 
-    $("#randomnumber").append(computerNumber);
 
-    $(".crystal1").on("click", function () {
-        adder = crystalValue1;
-        total += adder;
-        $(".totalScore").text(total);
-        gameOver();
-    });
 
-    $(".crystal2").on("click", function () {
-        adder = crystalValue2;
-        total += adder;
-        $(".totalScore").text(total);
-        gameOver();
-    });
+    var gameOver = function () {
+        total = parseInt(total);
+        if (total === computerNumber) {
+            wins++;
+            $(".win").text(wins);
+            alert("You Win!");
+            reset();
 
-    $(".crystal3").on("click", function () {
-        adder = crystalValue3;
-        total += adder;
-        $(".totalScore").text(total);
-        gameOver();
 
-    });
+        }
+        if (total > computerNumber) {
+            losses++;
+            $(".loose").text(losses);
+            alert("Sorry Try Again!");
+            reset();
+        }
 
-    $(".crystal4").on("click", function () {
-        adder = crystalValue4;
-        total += adder;
-        $(".totalScore").text(total);
-        gameOver();
 
-    });
+    }
+
+    var game = function () {
+
+        $("#randomNumber").text(computerNumber);
+
+        $(".crystal1").on("click", function () {
+            adder = crystalValue1;
+            total += adder;
+            $(".totalScore").text(total);
+            gameOver();
+        });
+
+        $(".crystal2").on("click", function () {
+            adder = crystalValue2;
+            total += adder;
+            $(".totalScore").text(total);
+            gameOver();
+        });
+
+        $(".crystal3").on("click", function () {
+            adder = crystalValue3;
+            total += adder;
+            $(".totalScore").text(total);
+            gameOver();
+
+        });
+
+        $(".crystal4").on("click", function () {
+            adder = crystalValue4;
+            total += adder;
+            $(".totalScore").text(total);
+            gameOver();
+
+        });
+    }
+    game();
 
 
 
